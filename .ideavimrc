@@ -1,0 +1,63 @@
+"" -- Suggested options --
+set number relativenumber
+set idearefactormode=keep
+set clipboard+=unnamed
+" set ideamarks
+
+set incsearch
+set ignorecase
+set smartcase
+
+let mapleader = " "
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Enable IdeaVim plugins
+set ideajoin
+set sneak
+set NERDTree
+set easymotion
+set commentary
+set surround
+set highlightedyank
+
+noremap <Leader>0 "0p
+
+map <Leader>p "+p
+map <Leader>P "+P
+map <Leader>y <Action>(CopyReference)
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
+
+inoremap jj <Esc>
+
+" Tab navigation
+nnoremap <A-l> :tabnext<CR>
+nnoremap <A-h> :tabprev<CR>\
+
+map gI <Action>(GotoImplementation)
+map gs <Action>(GotoSuperMethod)
+map gd <Action>(GotoDeclaration)
+
+map <Leader>fa <Action>(GotoAction)
+map <Leader>fc <Action>(GotoClass)
+map <Leader>ff <Action>(GotoFile)
+map <Leader>ft <Action>(TextSearchAction)
+map <Leader>fs <Action>(FileStructurePopup)
+map <Leader>o <Action>(OpenFile)
+map <Leader><Leader>v <Action>(EditorSelectWord)
+
+map <Leader>r <Action>(RenameElement)
+map <Leader><Leader>r <Action>(Replace)
+
+map ]] <Action>(MethodDown)
+map [[ <Action>(MethodUp)
+map = <Action>(ReformatCode)
+
+map <Leader>\ <Action>(MoveEditorToOppositeTabGroup)
+map <Leader>/ <Action>(Find)
+
+map <Leader>b <Action>(ToggleLineBreakpoint)
+map <Leader><tab> <Action>(RecentFiles)
+map <leader>o <Action>(FileStructurePopup)
