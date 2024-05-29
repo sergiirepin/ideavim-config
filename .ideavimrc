@@ -54,6 +54,7 @@ map <Leader><Leader>r <Action>(Replace)
 map ]] <Action>(MethodDown)
 map [[ <Action>(MethodUp)
 map = <Action>(ReformatCode)
+map <Leader>m <Action>(ToggleBookmark)
 
 map <Leader>\ <Action>(MoveEditorToOppositeTabGroup)
 map <Leader>/ <Action>(Find)
