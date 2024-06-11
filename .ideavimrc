@@ -2,11 +2,14 @@
 set number relativenumber
 set idearefactormode=keep
 set clipboard+=unnamed
-" set ideamarks
+set ideamarks
 
 set incsearch
 set ignorecase
 set smartcase
+
+" set notimeout
+" set ttimeout
 
 let mapleader = " "
 
@@ -27,8 +30,8 @@ noremap <Leader>0 "0p
 map <Leader>p "+p
 map <Leader>P "+P
 map <Leader>y <Action>(CopyReference)
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
+map <Leader>f <Plug>Sneak_s
+map <Leader>F <Plug>Sneak_S
 
 inoremap jj <Esc>
 
@@ -39,6 +42,10 @@ nnoremap <A-h> :tabprev<CR>\
 map gI <Action>(GotoImplementation)
 map gs <Action>(GotoSuperMethod)
 map gd <Action>(GotoDeclaration)
+
+map w [w
+map e ]w
+map b [b
 
 map <Leader>fa <Action>(GotoAction)
 map <Leader>fc <Action>(GotoClass)
@@ -62,3 +69,5 @@ map <Leader>/ <Action>(Find)
 map <Leader>b <Action>(ToggleLineBreakpoint)
 map <Leader><tab> <Action>(RecentFiles)
 map <leader>o <Action>(FileStructurePopup)
+map ` <Action>(ShowBookmarks)
+map <leader>` <Action>(ViewBreakpoints)
